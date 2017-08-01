@@ -1,0 +1,349 @@
+/* mise en forme générale*/
+body{
+    background-color:  #8D9594;
+}
+.container{
+    background: #ffbf80;    
+}
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+h3{
+    text-align: center;
+    font-size: 19px;
+}
+p{    
+    font-weight: bold;
+}
+.blue{
+    color:#006699;
+}
+.violet{
+    color: #990099;
+}
+.form{
+    margin: 70px 35% 100px 35%;
+}
+legend{
+    text-align: center;
+    font-weight: bold;
+}
+button{
+    margin-top: 15px;
+    float: right;
+    width: 220px;
+    height: 40px;
+    display: block;
+    width: 100%;       
+}
+.btn {
+    font-size: 18px;
+    font-weight: bold;
+}
+/*bouton facture de groupe*/
+#bouton{
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
+}
+/*cacher le code d'activation*/
+#hidkey{
+    background-color: grey;
+    color: grey;
+}
+#hidkey:hover{
+    background-color: #cccccc;
+    color: black;    
+}
+/*avertissement pour créer un mdp "homologué"*/
+.validationMdP{
+    background: red;
+    color: #fff;
+    display: none;
+    font-size: 12px;
+    padding: 3px;
+    position: absolute;
+    right: -200px;
+    text-align: center;
+    top: 0;
+    width: 200px;
+}
+input:focus + .validationMdP {
+  display: block;
+}
+input:focus:required:valid + .validationMdP {
+  background: green;
+}
+input:focus:required:valid + .validationMdP .invalid {
+  display: none;
+}
+input:focus:required:invalid + .validationMdP .valid {
+  display: none;
+}
+
+/* partie grisée pour non admninistrateur*/
+.nonAdmin{
+    color: grey;
+    margin-left: 20px;
+    width: 200px;
+}
+
+/*Tableau d'affichage des recherches*/
+/*#trh{
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #FAAC58;
+}
+
+td, th, #tabRech{
+    border-right: solid 1px black;
+    text-align: center;
+}
+
+#trb{
+    border: solid 1px black;
+    background-color: #F3E2A9;
+}
+#tabRech{    
+    border: solid 2px black; 
+    text-align: center;
+}*/
+
+/* liens annuler/valider si aucun résultat à la recherche
+.lienValAnn{
+    margin: 5px;
+    padding: 5px;
+    border: groove 5px black;
+    text-decoration: none;
+    width: 200px;
+    position: relative;
+    left: 35%;
+    right: 35%;
+    background-color: #BBD2E1;
+}
+
+.lienValAnn a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.lienValAnn:hover{
+    background-color: #ADACA9;
+}*/
+
+/*Tableau d'affichage des immatriculations dans fichier gestionTransporteur*/
+#tabImmat{
+     border: solid 2px black; 
+     text-align: center;
+     font-size: 16px;
+}
+
+.trh1{
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #FAAC58;
+    border: solid 2px black;
+    text-align: center;
+}
+#trb{
+    background-color: #FFE997;
+}
+
+.td1{    
+    padding: 5px 10px 5px 10px; 
+    width: 200px; 
+    height: 40px; 
+    font-size: 16px;
+}
+
+.scroll{    
+    height: 241px;
+    width: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* table des entrées : affichage de la bdd pesees*/
+#entrees caption{
+    color: black;
+    background-color: #FFB66E;
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;
+    box-shadow: 3px 1px 3px 1px black;
+    margin-bottom: 10px;
+}
+#entrees thead {    
+    display:block;
+    background-color: #ffb946;
+}
+#entrees tbody {
+    display:block;
+    background-color: #f8e3b7;
+    height:12em;
+    overflow-y:scroll;
+    text-align: center;
+}
+#entrees thead tr th:nth-child(1) { /* column 1 ! */
+    width:5em;
+    text-align: center;
+ }
+#entrees thead tr th:nth-child(2) { /* column 2 */
+    width:5em;
+    text-align: center;
+ }
+#entrees thead tr th:nth-child(3) { /* column 3 ! */
+     width:15em;
+    text-align: center;
+ }
+#entrees thead tr th:nth-child(4) { /* column 4 */
+    width:10em;
+    text-align: center;
+ }
+#entrees thead tr th:nth-child(5) { /* column 5 ! */
+    width:5em;
+    text-align: center;
+ }
+#entrees thead tr th:nth-child(6) { /* column 6 */
+    width:6em;
+    text-align: center;
+ } 
+#entrees tbody tr:first-child td:nth-child(1) { /* column 1 ! */
+     width:5em;
+ }
+#entrees tbody tr:first-child td:nth-child(2) { /* column 2 */
+     width:5em;
+ }
+#entrees tbody tr:first-child td:nth-child(3) { /* column 3 ! */
+    width:15em;
+ }
+#entrees tbody tr:first-child td:nth-child(4) { /* column 4 */
+    width:10em;
+ }
+#entrees tbody tr:first-child td:nth-child(5) { /* column 5 ! */
+    width:5em;
+ }
+#entrees tbody tr:first-child td:nth-child(6) { /* column 6 */
+    width:6em;
+ }
+ 
+ /* table des recherches historiquepesees*/
+#search caption{
+    color: black;
+    background-color: #FFB66E;
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;
+    box-shadow: 3px 1px 3px 1px black;
+    margin-bottom: 10px;
+}
+#search thead {
+    display:block;
+    background-color: #ffb946;
+}
+#search tbody {
+    display:block;
+    background-color: #f8e3b7;
+    height:12em;
+    overflow-y:scroll;
+    text-align: center;
+}
+#search thead tr th:nth-child(1) { /* column 1 ! */
+    width:5em;
+    text-align: center;
+ }
+#search thead tr th:nth-child(2) { /* column 2 */
+    width:12em;
+    text-align: center;
+ }
+#search thead tr th:nth-child(3) { /* column 3 ! */
+     width:9em;
+    text-align: center;
+ }
+#search thead tr th:nth-child(4) { /* column 4 */
+    width:8em;
+    text-align: center;
+ }
+#search thead tr th:nth-child(5) { /* column 5 ! */
+    width:6em;
+    text-align: center;
+ }
+#search tbody tr:first-child td:nth-child(1) { /* column 1 ! */
+     width:5em;
+ }
+#search tbody tr:first-child td:nth-child(2) { /* column 2 */
+     width:12em;
+ }
+#search tbody tr:first-child td:nth-child(3) { /* column 3 ! */
+    width:9em;
+ }
+#search tbody tr:first-child td:nth-child(4) { /* column 4 */
+    width:8em;
+ }
+#search tbody tr:first-child td:nth-child(5) { /* column 5 ! */
+    width:6em;
+ }
+ 
+/* table des recherches client, site, transporteur*/
+#recherche caption{
+    color: black;
+    background-color: #FFB66E;
+    text-align: center;
+    font-size: 18px;
+    font-style: italic; 
+    font-weight: bold;
+    box-shadow: 3px 1px 3px 1px black;
+    margin-bottom: 10px;
+}
+#recherche thead {    
+    display:block;
+    background-color: #ffb946;
+    font-weight: bold;
+}
+#recherche tbody {
+    display:block;
+    background-color: #f8e3b7;
+    height:12em;
+    text-align: center;
+    margin-right: -10px;
+    overflow-y:scroll;
+}
+#recherche thead tr th:nth-child(1) { /* column 1 ! */
+    width:8em;    
+    text-align: center;
+ }
+#recherche thead tr th:nth-child(2) { /* column 2 */
+    width:15em; 
+    text-align: center;
+ }
+#recherche thead tr th:nth-child(3) { /* column 3 ! */
+     width:5em; 
+    text-align: center;
+ }
+#recherche thead tr th:nth-child(4) { /* column 4 */
+    width:12em; 
+    text-align: center;
+ }
+#recherche thead tr th:nth-child(5) { /* column 5 ! */
+    width:10em; 
+    text-align: center;
+ } 
+#recherche tbody tr:first-child td:nth-child(1) { /* column 1 ! */
+     width:8em;
+ }
+#recherche tbody tr:first-child td:nth-child(2) { /* column 2 */
+     width:15em;
+ }
+#recherche tbody tr:first-child td:nth-child(3) { /* column 3 ! */
+    width:5em;
+ }
+#recherche tbody tr:first-child td:nth-child(4) { /* column 4 */
+    width:12em;
+ }
+#recherche tbody tr:first-child td:nth-child(5) { /* column 5 ! */
+    width:10em;
+ }
